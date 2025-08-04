@@ -14,15 +14,16 @@ crossbeam = { version = "0.8.4", features = ["crossbeam-channel"] }
 objc2 = "0.6.0"
 objc2-foundation = "0.3.0"
 objc2-game-controller = "0.3.0"
-bevy_app = "0.15"
-bevy_input = "0.15"
-bevy_ecs = "0.15"
-bevy_utils = "0.15"
-bevy_log = "0.15"
+bevy_app.workspace = true
+bevy_input.workspace = true
+bevy_ecs.workspace = true
+bevy_utils.workspace = true
+bevy_platform.workspace = true
+bevy_log.workspace = true
 thiserror = "2.0.12"
 
 [dev-dependencies]
-bevy = { version = "0.15", default-features = false, features = [
+bevy = { version = "0.16", default-features = false, features = [
     "android-game-activity",
     "android_shared_stdcxx",
     "animation",

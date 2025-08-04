@@ -4,7 +4,7 @@ use bevy_input::gamepad::{
     GamepadButton, GamepadConnectionEvent, RawGamepadAxisChangedEvent,
     RawGamepadButtonChangedEvent, RawGamepadEvent,
 };
-use bevy_utils::HashMap;
+use bevy_platform::collections::hash_map::HashMap;
 use crossbeam::channel::{Receiver, unbounded};
 use platform::{AppleGameControllerPlatform, GamepadPlatformEvent, Platform as _};
 
