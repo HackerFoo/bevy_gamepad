@@ -43,8 +43,8 @@ pub(crate) type GamepadId = usize;
 fn platform_system(
     mut commands: Commands,
     mut handler: ResMut<GamepadPlatformHandler>,
-    mut connection_writer: EventWriter<GamepadConnectionEvent>,
-    mut gamepad_events: EventWriter<RawGamepadEvent>,
+    mut connection_writer: MessageWriter<GamepadConnectionEvent>,
+    mut gamepad_events: MessageWriter<RawGamepadEvent>,
 ) {
     while let Ok(event) = handler.rx.try_recv() {
         match event {
