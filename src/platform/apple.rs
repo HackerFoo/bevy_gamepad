@@ -259,7 +259,7 @@ impl Platform for AppleGameControllerPlatform {
 
     fn new(_app: &mut App, tx: Sender<GamepadPlatformEvent>) -> Result<Self, GamepadError> {
         // Get the default notification center
-        let notification_center = unsafe { NSNotificationCenter::defaultCenter() };
+        let notification_center = NSNotificationCenter::defaultCenter();
 
         let driver = Self {
             notification_center,
